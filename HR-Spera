@@ -39,7 +39,6 @@
 
         .content { padding: 32px; }
 
-        /* 步驟管理 */
         .step-container { display: none; animation: fadeIn 0.3s ease-in-out; }
         .step-container.active { display: block; }
 
@@ -64,7 +63,6 @@
         .question-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 8px; line-height: 1.4; }
         .question-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.5; }
 
-        /* 選項按鈕美化 */
         .options-grid { display: flex; flex-direction: column; gap: 12px; }
         .option-btn { 
             background: #ffffff; 
@@ -92,7 +90,6 @@
         .option-btn span:last-child { color: var(--text-secondary); transition: transform 0.2s; }
         .option-btn:hover span:last-child { color: var(--primary); transform: translateX(3px); }
 
-        /* 結果顯示卡片 */
         .result-card-box { 
             background: #f8fafc; 
             border: 1px solid var(--border-color); 
@@ -113,29 +110,13 @@
         .result-item:last-child { margin-bottom: 0; }
         .result-item b { color: var(--text-main); font-weight: 600; }
 
-        /* 狀態標籤 */
         .badge { font-weight: 700; font-size: 13px; padding: 5px 14px; border-radius: 99px; display: inline-block; letter-spacing: 0.02em; }
         .badge-blue { color: #1d4ed8; background: #eff6ff; border: 1px solid #bfdbfe; }
         .badge-purple { color: #6d28d9; background: #f5f3ff; border: 1px solid #ddd6fe; }
         .badge-green { color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; }
         .badge-rose { color: #be123c; background: #fff1f2; border: 1px solid #fecdd3; }
 
-        /* 按鈕群組 */
         .btn-group { display: flex; gap: 10px; margin-top: 24px; }
-        .btn-primary { 
-            background: var(--primary); 
-            color: #ffffff; 
-            border: none; 
-            font-size: 14px; 
-            font-weight: 600; 
-            padding: 12px 24px; 
-            border-radius: 10px; 
-            cursor: pointer; 
-            width: 100%; 
-            transition: background 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-        }
-        .btn-primary:hover { background: var(--primary-hover); }
         .btn-secondary { 
             background: #ffffff; 
             color: var(--text-secondary); 
@@ -154,7 +135,7 @@
     <div class="container">
         <div class="card">
             <div class="header">
-                <h1>員工到職身分與作業流程導引系統</h1>
+                <h1>員工到職身分與流程判定導引系統</h1>
                 <p>協助內部主管快速判定新進同仁身分別、適用流程與系統設定依據</p>
             </div>
 
@@ -177,7 +158,7 @@
                     </div>
                 </div>
 
-                <!-- 步驟 2A：是否有直營紀錄後的轉換判定 -->
+                <!-- 步驟 2A -->
                 <div id="step2_trans" class="step-container">
                     <span class="question-badge">Step 2 / 3</span>
                     <div class="question-title">這次回來（或轉調），屬於內部系統調動嗎？</div>
@@ -197,7 +178,7 @@
                     </div>
                 </div>
 
-                <!-- 步驟 2B：中斷時間判定 -->
+                <!-- 步驟 2B -->
                 <div id="step2_break" class="step-container">
                     <span class="question-badge">Step 3 / 3</span>
                     <div class="question-title">請問上次離職到這次新身分到職，中斷多久？</div>
@@ -217,7 +198,7 @@
                     </div>
                 </div>
 
-                <!-- 步驟 2C：短期回任細分區間 -->
+                <!-- 回任細節判定 -->
                 <div id="step_return_detail" class="step-container">
                     <span class="question-badge">回任細節判定</span>
                     <div class="question-title">請選擇詳細的中斷天數區間：</div>
